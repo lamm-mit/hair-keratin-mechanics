@@ -1,4 +1,4 @@
-# hair-keratin-mechanics
+# Comparative Molecular Dynamics Characterization of Hair Keratin Unfolding Mechanics
 This repository contains code, datasets, and representative media supporting our study of hair keratin proteins using molecular dynamics (MD) and steered molecular dynamics (SMD) simulations.
 
 This work aims to investigate the secondary structure evolution, strain-rate-dependent unfolding behavior, and nanomechanical response of hair keratin proteins, and to provide reproducible simulation workflows and curated datasets for future studies on keratin mechanics and fibrous biomaterials.
