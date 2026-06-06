@@ -17,6 +17,29 @@ This work aims to investigate the secondary structure evolution, strain-rate-dep
 - `code/`: simulation scripts and workflow files
 - `media/`: videos and visual materials
 
+## Keratin Protein Background and Study Significance
+
+Keratins are structural proteins that form intermediate filaments in epithelial tissues, including hair, skin, and nails. In hair fibers, keratin proteins assemble into hierarchical structures that help determine mechanical properties such as strength, elasticity, toughness, and resistance to fracture. Keratins are commonly grouped into two complementary classes: Type I keratins, which are generally acidic, and Type II keratins, which are generally basic or neutral. These proteins pair to form coiled-coil heterodimers that further assemble into larger filament networks.
+
+This work focuses on human hair keratins at the molecular scale. While hair-fiber mechanics are often studied experimentally at the macroscopic level, the molecular unfolding behavior of individual keratin proteins is less systematically characterized. The paper addresses this gap by curating 51 human keratin proteins, predicting or collecting their structures, and simulating their unfolding under controlled steered molecular dynamics conditions.
+
+```mermaid
+flowchart LR
+    A["Human keratin sequences"] --> B["AlphaFold protein structures"]
+    B --> C["Equilibration MD"]
+    C --> D["Steered MD pulling"]
+    D --> E["Force-displacement curves"]
+    E --> F["Strength and toughness"]
+    B --> G["Sequence and structure descriptors"]
+    G --> H["Structure-property analysis"]
+    F --> H
+    H --> I["Molecular insight into hair-fiber mechanics"]
+```
+The significance of this study is that it provides a reproducible, dataset-scale molecular dynamics framework for comparing keratin unfolding mechanics across Type I and Type II keratins. By connecting sequence features, predicted structures, secondary-structure descriptors, and MD-derived mechanical properties, the study helps explain how molecular-scale protein behavior may contribute to the toughness and resilience of hierarchical hair fibers.
+
+The steered molecular dynamics pulling velocities used in the study are accelerated computational probes, not direct reproductions of experimental hair-fiber strain rates. Their value is comparative: they reveal relative unfolding trends, rate-sensitive stiffening, strength-toughness coupling, and relationships between molecular descriptors such as sequence length, molecular weight, coil content, SASA, and energy absorption.
+
+
 ## Keratin datasets
 
 The keratin sequence, structure, and molecular-dynamics property datasets used in this work are available on Hugging Face under `lamm-mit`:
