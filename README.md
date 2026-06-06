@@ -35,6 +35,7 @@ from datasets import load_dataset
 fasta = load_dataset("lamm-mit/keratin-fasta", split="train")
 pdb = load_dataset("lamm-mit/keratin-pdb", split="train")
 md_props = load_dataset("lamm-mit/keratin-mech-seq-ss-md-properties", split="train")
+```
 
 ## Citation
 If you use this repository, please cite the associated paper.
@@ -45,6 +46,6 @@ If you use this repository, please cite the associated paper.
     author={Wei Lu, Fabien Leonforte, Markus J. Buehler},
     journal={xxx},
     year={2026},
-    url={http://},
+    url={http://XYZ.XYZ},
 }
 ```
