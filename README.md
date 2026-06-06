@@ -17,11 +17,30 @@ This work aims to investigate the secondary structure evolution, strain-rate-dep
 - `code/`: simulation scripts and workflow files
 - `media/`: videos and visual materials
 
+## Keratin datasets
+
+The keratin sequence, structure, and molecular-dynamics property datasets used in this work are available on Hugging Face under `lamm-mit`:
+
+| Dataset | Contents |
+|---|---|
+| [`lamm-mit/keratin-fasta`](https://huggingface.co/datasets/lamm-mit/keratin-fasta) | 51 curated human keratin FASTA sequences with UniProt accessions, keratin type, organism metadata, sequence checksums, amino-acid composition, and molecular-weight descriptors. |
+| [`lamm-mit/keratin-pdb`](https://huggingface.co/datasets/lamm-mit/keratin-pdb) | AlphaFold/AlphaFold2 PDB structures for the 51 keratins, including raw PDB text, chain/residue/atom metadata, SEQRES records, coordinate summaries, and pLDDT confidence statistics. |
+| [`lamm-mit/keratin-mech-seq-ss-md-properties`](https://huggingface.co/datasets/lamm-mit/keratin-mech-seq-ss-md-properties) | Long-form molecular-dynamics results for 51 keratins across four accelerated SMD pulling velocities (`v0`, `v1`, `v2`, `v4`), including force vectors, strength, toughness, normalized mechanical properties, sequence descriptors, secondary-structure descriptors, SASA, persistence length, and hydrogen-bond change. |
+
+Example loading code:
+
+```python
+from datasets import load_dataset
+
+fasta = load_dataset("lamm-mit/keratin-fasta", split="train")
+pdb = load_dataset("lamm-mit/keratin-pdb", split="train")
+md_props = load_dataset("lamm-mit/keratin-mech-seq-ss-md-properties", split="train")
+
 ## Citation
 If you use this repository, please cite the associated paper.
 
 ```bibtex
-@article{xxx,
+@article{LuLeonforteBuehler2026,
     title={Comparative Molecular Dynamics Characterization of Hair Keratin Unfolding Mechanics},
     author={Wei Lu, Fabien Leonforte, Markus J. Buehler},
     journal={xxx},
