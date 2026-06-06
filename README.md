@@ -42,7 +42,7 @@ The steered molecular dynamics pulling velocities used in the study are accelera
 
 ## Keratin datasets
 
-The keratin sequence, structure, and molecular-dynamics property datasets used in this work are available on Hugging Face under `lamm-mit`:
+The keratin sequence, structure, and molecular-dynamics property datasets used in this work are available on Hugging Face 🤗 under `lamm-mit`:
 
 | Dataset | Contents |
 |---|---|
